@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My App</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <mat-toolbar color="primary">
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Open menu">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <div>
+            <span>My App</span>
+            <span>LOGIN</span>
+        </div>
+    </mat-toolbar>
+
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+            <mat-icon>home</mat-icon>
+            <span>Home</span>
+        </button>
+        <button mat-menu-item>
+            <mat-icon>info</mat-icon>
+            <span>About</span>
+        </button>
+        <button mat-menu-item>
+            <mat-icon>settings</mat-icon>
+            <span>Settings</span>
+        </button>
+    </mat-menu>
+</body>
+
+</html>

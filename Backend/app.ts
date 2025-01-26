@@ -3,8 +3,15 @@ import { router as index } from "./api/index";
 import { router as transactions } from "./api/transactions";
 import { connectDB } from "./api/conndb"; // นำเข้า connectDB เป็นฟังก์ชัน
 import bodyParser from "body-parser";
+import cors from "cors";
+
 
 export const app = express();
+app.use(
+    cors({
+      origin: "http://localhost:4200",
+    })
+  );
 
 // Middleware
 app.use(bodyParser.text());
